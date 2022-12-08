@@ -1,3 +1,62 @@
 
 <app-header></app-header>
-<div><router-outlet></router-outlet></div>
+<router-outlet></router-outlet>
+<mat-card>    
+       
+    <mat-card-title>    
+        Registro Facultativo   
+    </mat-card-title>    
+    
+    <mat-card-content>    
+        <form class="facultative-form">
+            <mat-form-field class="facultative-form-full-width" appearance="fill">
+              <mat-label>Company (disabled)</mat-label>
+                <input type="text" matInput  [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete" >
+                        <mat-option  >
+                           
+                        </mat-option>
+                    </mat-autocomplete>
+            </mat-form-field>
+          
+            <table class="" cellspacing="0"><tr>
+              <td><mat-form-field class="facultative-form-full-width" appearance="fill">
+                <mat-label>First test</mat-label>
+                <input matInput placeholder="First test">
+              </mat-form-field></td>
+              <td><mat-form-field class="facultative-form-full-width" appearance="fill">
+                <mat-label>Second test</mat-label>
+                <input matInput placeholder="Second test">
+              </mat-form-field></td>
+            </tr></table>
+          
+            <p>
+              <mat-form-field class="facultative-form-full-width" appearance="fill">
+                <mat-label>Three test</mat-label>
+                <input matInput placeholder="Three test">
+              </mat-form-field>
+              <mat-form-field class="facultative-form-full-width" appearance="fill">
+                <mat-label>Fourth test</mat-label>
+                <input matInput placeholder="Fourth test">
+              </mat-form-field>
+            </p>
+          
+            <table class="facultative-form-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="facultative-form-full-width" appearance="fill">
+                <mat-label>Fifth test</mat-label>
+                <input matInput placeholder="Fifth test">
+              </mat-form-field></td>
+              <td><mat-form-field class="facultative-form-full-width" appearance="fill">
+                <mat-label>Sixth test</mat-label>
+                <input matInput placeholder="Sixth test">
+              </mat-form-field></td>
+              <td><mat-form-field class="facultative-form-full-width" appearance="fill">
+                <mat-label>Seventh test</mat-label>
+                <input matInput #message maxlength="5" placeholder="Seventh test" value="">
+                <mat-hint align="start"><strong>Seventh test</strong> </mat-hint>
+                <mat-hint align="end">{{message.value.length}} / 250</mat-hint>
+              </mat-form-field></td>
+            </tr></table>
+          </form>          
+    </mat-card-content>    
+</mat-card> 
